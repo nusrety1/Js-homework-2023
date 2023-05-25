@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
+    </script>
+    <title>Hesap.com</title>
+</head>
+
+<body>
+
+    <nav style="z-index: 1; position: fixed;margin-top: -50px;" class="navbar navbar-expand-lg bg-body-secondary rounded-bottom-5 w-100">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-5" href="#">Yıldız Hesaplamacılık</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse m-auto d-table" id="navbarNavDropdown">
+                <ul class="navbar-nav m-auto d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="showData('hesapYas')" href="#hesapYas">Yaş Hesapla</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="showData('ehliyet')" href="#ehliyet">Ehliyet Hesapla</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="showData('ort')" href="#ort">Ortalama Hesapla</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" onclick="showData('karne')" href="#karne">Takdir-Teşekkür Hesapla</a>
+                    </li>
+
+                    <li class="nav-item" style="margin: 0px 0 -10px 20px;">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn nav-link active" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Çıkış Yap
+                        </button>
+                    </li>
+                    <li class="nav-item" style="margin: 0px 0 -10px 20px;">
+                        <button class="btn border" onclick="myFunction()">Dark Mode</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Çıkış Yapmak İstiyor Musunuz?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer m-auto d-table">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            <a class="link-light link-underline-opacity-0"
+                                href="https://www.linkedin.com/in/b%C3%BCnyamin-nusret-yildiz-47451a221/">
+                                Çıkış Yap</button></a>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                            aria-label="Close">Kal</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- content -->
+    <section>
+        <div class="mx-5 my-5 text-dark" id="kayanAnimasyon">
+            <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+                <div class="container-fluid py-5 d-flex">
+                    <div class="my-5 dx-5 d-table m-auto">
+                        <p class="col-md-8 fs-3">
+                            Matematikle ifade edebiliyorsanız, bilginiz doyurucudur. </p>
+                        <h1 class="display-5 fw-bold">Lord KELVIN</h1>
+                    </div>
+                    <div>
+                        <img id="animasyonluElement" class=" w-50 rounded-3 "
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Lord_Kelvin_photograph.jpg/640px-Lord_Kelvin_photograph.jpg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-md-stretch">
+                <div class="col-md-6">
+                    <div class="h-100 p-5 text-bg-dark d-flex rounded-3">
+                        <div class="mx-2 my-5">
+                            <h2>Harezmi</h2>
+                            <p>Algoritma şöyle diyor: Rabbimiz ve koruyucumuz olan Allah ‘a hamd ve senalar olsun</p>
+                        </div>
+                        <div>
+                            <img class=" w-75 mx-5 rounded-3 "
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Al-Khwarizmi_portrait.jpg/274px-Al-Khwarizmi_portrait.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="h-100 p-5 bg-body-tertiary border d-flex rounded-3">
+                        <div class="mx-2">
+                            <h2>John von Neumann</h2>
+                            <p>Matematikte bir şeyleri asla anlamazsın, sadece onlara alışırsın.</p>
+                        </div>
+                        <div>
+                            <img class=" w-100 h-75 rounded-3 "
+                                src="https://www.thenation.com/wp-content/uploads/2022/11/Qian-Nirenberg-John_von_Neumann-illo.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="mx-4 my-5">
+
+    <!-- Ehliyet Hesaplama Form -->
+    <div class="container m-auto w-25 bg-light my-5 rounded-5" id="ehliyet" style="display: none;">
+        <div>
+            <div class="m-3">
+                <div class="form-text fs-5" id="basic-addon4">Yaşınızı Giriniz</div>
+                <div class="input-group">
+                    <input type="number" class="form-control" id="yas" aria-describedby="basic-addon3 basic-addon4">
+                </div>
+                <div class="form-text" id="basic-addon4">Ehliyet Durumunuzu Öğrenmek İçin Yaşınızı Belirtmelisiniz</div>
+            </div>
+
+            <!-- <div class="m-auto d-table my-3">
+            <label for="yas">Yaşınızı Girin</label><br />
+            <input type="number" id="yas" placeholder="Yaşınızı Girin">
+           </div> -->
+
+            <div class="m-auto d-table my-3 btn btn-primary w-50">
+                <input class="btn btn-primary rounded-3" type="button" id="hesapla" value="HESAPLA">
+            </div>
+
+            <div class="bg-info rounded-3 my-3 p-1 m-auto d-table" id="durumgoster">...</div>
+        </div>
+    </div>
+
+
+    <!-- Yaş Hesaplama Formu -->
+    <div class="container m-auto w-25 bg-light my-5 p-5 rounded-5" id="hesapYas" style="display: none;">
+        <!-- <style>
+            .qwe {
+                width: 70px;
+            }
+        </style> -->
+        <div>
+            <div>
+                <div class="form-text fs-5" id="basic-addon4">Doğum Tarihinizi Girin</div>
+                <div class="mb-3 d-flex">
+                    <div>
+                        <label for="basic-url" class="form-label"></label>
+                        <div class="input-group qwe p-1">
+                            <input type="text" class="form-control" id="dogum_gun"
+                                aria-describedby="basic-addon3 basic-addon4" placeholder="Gün">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="basic-url" class="form-label"></label>
+                        <div class="input-group qwe p-1">
+                            <input type="text" class="form-control" id="dogum_ay"
+                                aria-describedby="basic-addon3 basic-addon4" placeholder="ay">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="basic-url" class="form-label"></label>
+                        <div class="input-group p-1">
+                            <input type="text" class="form-control" id="dogum_yil"
+                                aria-describedby="basic-addon3 basic-addon4" placeholder="yil">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-text" id="basic-addon4">Yaşınızı Hesaplamak İçin Doğum Tarihinizi Girin</div>
+                <div class="col-12">
+                    <button class="btn btn-primary m-auto d-table my-4" id="hesaplaYas" type="submit">Hesapla</button>
+                </div>
+                <div class="bg-info rounded-3 my-3 p-1 m-auto d-table" id="durumGosterYas">...</div>
+            </div>
+            <hr class="mx-4 my-5">
+        </div>
+    </div>
+
+
+    <!-- Karne Hesaplama Form -->
+    <div class="container m-auto w-75 bg-light my-5 p-5 rounded-5" id="karne" style="display: none;">
+
+        <div class="form-text fs-5 m-auto d-table pb-5" id="basic-addon4">Sınav Sonuçlarınızı Girin</div>
+        <div class="m-auto d-table text-dark">
+            <div class="mb-3 m-auto d-flex">
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Matematik 1</label>
+                    <input type="text" class="form-control w-100" id="noteMatematik" aria-describedby="emailHelp">
+                </div>
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Matematik 2</label>
+                    <input type="text" class="form-control w-100" id="noteMatematik_2" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Haftalık Saat</label>
+                    <input type="number" class="form-control w-50" id="creditMatematik" value="6"
+                        aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="mb-3 m-auto d-flex ">
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Fizik -1</label>
+                    <input type="number" class="form-control w-100" id="noteFizik" aria-describedby="emailHelp">
+                </div>
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Fizik 2</label>
+                    <input type="text" class="form-control w-100" id="noteFizik_2" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Haftalık Saat</label>
+                    <input type="number" class="form-control w-50" id="creditFizik" value="4"
+                        aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="mb-3 m-auto d-flex ">
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Kimya 1</label>
+                    <input type="number" class="form-control w-100" id="noteKimya" aria-describedby="emailHelp">
+                </div>
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Kimya 2</label>
+                    <input type="number" class="form-control w-100" id="noteKimya_2" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Haftalık Saat</label>
+                    <input type="number" class="form-control w-50" id="creditKimya" value="4"
+                        aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="mb-3 m-auto d-flex ">
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Biyoloji 1</label>
+                    <input type="number" class="form-control w-100" id="noteBiyoloji" aria-describedby="emailHelp">
+                </div>
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Biyoloji 2</label>
+                    <input type="number" class="form-control w-100" id="noteBiyoloji_2" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Haftalık Saat</label>
+                    <input type="number" class="form-control w-50" id="creditBiyoloji" value="4"
+                        aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="mb-3 m-auto d-flex ">
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Tarih 1</label>
+                    <input type="number" class="form-control w-100" id="noteTarih" aria-describedby="emailHelp">
+                </div>
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Tarih 2</label>
+                    <input type="number" class="form-control w-100" id="noteTarih_2" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Haftalık Saat</label>
+                    <input type="number" class="form-control w-50" id="creditTarih" value="4"
+                        aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="mb-3 m-auto d-flex ">
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Coğrafya 1</label>
+                    <input type="number" class="form-control w-100" id="noteCografya" aria-describedby="emailHelp">
+                </div>
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Coğrafya 2</label>
+                    <input type="number" class="form-control w-100" id="noteCografya_2" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Haftalık Saat</label>
+                    <input type="number" class="form-control w-50" id="creditCografya" value="4"
+                        aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="mb-3 m-auto d-flex ">
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Edebiyat 1</label>
+                    <input type="number" class="form-control w-100" id="noteEdebiyat" aria-describedby="emailHelp">
+                </div>
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Edebiyat 2</label>
+                    <input type="number" class="form-control w-100" id="noteEdebiyat_2" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Haftalık Saat</label>
+                    <input type="number" class="form-control w-50" id="creditEdebiyat" value="6"
+                        aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="mb-3 m-auto d-flex ">
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Felsefe 1</label>
+                    <input type="number" class="form-control w-100" id="noteFelsefe" aria-describedby="emailHelp">
+                </div>
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Felsefe 2</label>
+                    <input type="number" class="form-control w-100" id="noteFelsefe_2" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Haftalık Saat</label>
+                    <input type="number" class="form-control w-50" id="creditFelsefe" value="4"
+                        aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="mb-3 m-auto d-flex ">
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Din Kültürü 1</label>
+                    <input type="number" class="form-control w-100" id="noteDin" aria-describedby="emailHelp">
+                </div>
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Din Kültürü 2</label>
+                    <input type="number" class="form-control w-100" id="noteDin_2" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Haftalık Saat</label>
+                    <input type="number" class="form-control w-50" id="creditDin" value="4"
+                        aria-describedby="emailHelp">
+                </div>
+            </div>
+
+            <div class="col-12">
+                <button class="btn btn-primary m-auto d-table my-4" id="hesaplaOrt" type="submit">Hesapla</button>
+            </div>
+
+        </div>
+        <div class="bg-info rounded-3 my-3 p-1 m-auto d-table" id="durumGosterNot">...</div>
+    </div>
+
+
+    <!-- Ortalama Hesaplama Form -->
+    <div class="container m-auto w-75 bg-light my-5 p-5 rounded-5 text-dark" id="ort" style="display: none;">
+        <div>
+            <div class="form-text fs-5 p-1" id="basic-addon4">Ders 1</div>
+            <div class="mb-3 m-auto d-flex">
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Sınav 1 Sonuç</label>
+                    <input type="number" class="form-control w-100" id="d1s1" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Sınav Etki Oranı</label>
+                    <input type="number" class="form-control w-50" id="d1y1" value="40" aria-describedby="emailHelp">
+                </div>
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Sınav 2 Sonuç</label>
+                    <input type="text" class="form-control w-100" id="d1s2" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Sınav Etki Oranı</label>
+                    <input type="number" class="form-control w-50" id="d1y2" value="60" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Kredi</label>
+                    <input type="number" class="form-control w-50" id="creditS1" value="3" aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="form-text fs-5 p-1" id="basic-addon4">Ders 2</div>
+            <div class="mb-3 m-auto d-flex">
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Sınav 1 Sonuç</label>
+                    <input type="text" class="form-control w-100" id="d2s1" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Sınav Etki Oranı</label>
+                    <input type="number" class="form-control w-50" id="d2y1" value="40" aria-describedby="emailHelp">
+                </div>
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Sınav 2 Sonuç</label>
+                    <input type="text" class="form-control w-100" id="d2s2" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Sınav Etki Oranı</label>
+                    <input type="number" class="form-control w-50" id="d2y2" value="60" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Kredi</label>
+                    <input type="number" class="form-control w-50" id="creditS2" value="3" aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="form-text fs-5 p-1" id="basic-addon4">Ders 3</div>
+            <div class="mb-3 m-auto d-flex">
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Sınav 1 Sonuç</label>
+                    <input type="text" class="form-control w-100" id="d3s1" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Sınav Etki Oranı</label>
+                    <input type="number" class="form-control w-50" id="d3y1" value="40" aria-describedby="emailHelp">
+                </div>
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Sınav 2 Sonuç</label>
+                    <input type="text" class="form-control w-100" id="d3s2" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Sınav Etki Oranı</label>
+                    <input type="number" class="form-control w-50" id="d3y2" value="60" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Kredi</label>
+                    <input type="number" class="form-control w-50" id="creditS3" value="3" aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="form-text fs-5 p-1" id="basic-addon4">Ders 4</div>
+            <div class="mb-3 m-auto d-flex">
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Sınav 1 Sonuç</label>
+                    <input type="text" class="form-control w-100" id="d4s1" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Sınav Etki Oranı</label>
+                    <input type="number" class="form-control w-50" id="d4y1" value="40" aria-describedby="emailHelp">
+                </div>
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Sınav 2 Sonuç</label>
+                    <input type="text" class="form-control w-100" id="d4s2" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Sınav Etki Oranı</label>
+                    <input type="number" class="form-control w-50" id="d4y2" value="60" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Kredi</label>
+                    <input type="number" class="form-control w-50" id="creditS4" value="3" aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="form-text fs-5 p-1" id="basic-addon4">Ders 5</div>
+            <div class="mb-3 m-auto d-flex">
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Sınav 1 Sonuç</label>
+                    <input type="text" class="form-control w-100" id="d5s1" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Sınav Etki Oranı</label>
+                    <input type="number" class="form-control w-50" id="d5y1" value="40" aria-describedby="emailHelp">
+                </div>
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Sınav 2 Sonuç</label>
+                    <input type="text" class="form-control w-100" id="d5s2" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Sınav Etki Oranı</label>
+                    <input type="number" class="form-control w-50" id="d5y2" value="60" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Kredi</label>
+                    <input type="number" class="form-control w-50" id="creditS5" value="3" aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="form-text fs-5 p-1" id="basic-addon4">Ders 6</div>
+            <div class="mb-3 m-auto d-flex">
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Sınav 1 Sonuç</label>
+                    <input type="text" class="form-control w-100" id="d6s1" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Sınav Etki Oranı</label>
+                    <input type="number" class="form-control w-50" id="d6y1" value="40" aria-describedby="emailHelp">
+                </div>
+                <div class="mx-4">
+                    <label for="exampleInputEmail1" class="form-label">Sınav 2 Sonuç</label>
+                    <input type="text" class="form-control w-100" id="d6s2" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Sınav Etki Oranı</label>
+                    <input type="number" class="form-control w-50" id="d6y2" value="60" aria-describedby="emailHelp">
+                </div>
+                <div>
+                    <label for="exampleInputEmail1" class="form-label">Kredi</label>
+                    <input type="number" class="form-control w-50" id="creditS6" value="3" aria-describedby="emailHelp">
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary m-auto d-table my-4" id="hesaplaOrtalama" type="submit">Hesapla</button>
+            </div>
+            <div class="bg-info rounded-3 my-3 p-1 m-auto d-table" id="durumGoster">...</div>
+
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="pt-3 mt-4 p-5 text-body-secondary border-top">
+        Copyright © 2023 | Hakları Tartışılır.
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
